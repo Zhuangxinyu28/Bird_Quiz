@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>鸟格测试</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <main class="app-card">
+      <section id="start-screen" class="screen active">
+        <div class="eyebrow">轻量搞笑版人格测试</div>
+        <h1>你的鸟格类型是？</h1>
+        <p class="intro">
+          共 18 题，每题 3 个选项。<br>
+          凭直觉点击就好，不需要过度思考——当然，<span class="accent-inline">思考意义者</span>可能不会听。
+        </p>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="feature-kicker">题目风格</div>
+            <div class="feature-text">轻松、怪、有点欠</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-kicker">结果呈现</div>
+            <div class="feature-text">一本正经地优雅损你</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-kicker">测试时长</div>
+            <div class="feature-text">约 2 - 4 分钟</div>
+          </div>
+        </div>
+        <button id="start-btn" class="primary-btn">开始测试</button>
+      </section>
+
+      <section id="quiz-screen" class="screen">
+        <div class="topbar">
+          <div>
+            <div class="eyebrow">Bird Type Quiz</div>
+            <div id="progress-text" class="progress-text">第 1 / 18 题</div>
+          </div>
+          <div id="progress-count" class="progress-count">0 / 18</div>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+
+        <div class="question-card">
+          <h2 id="question-title" class="question-title"></h2>
+          <div id="options-container" class="options"></div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="prev-btn" class="ghost-btn">上一题</button>
+          <button id="next-btn" class="primary-btn" disabled>下一题</button>
+        </div>
+      </section>
+
+      <section id="result-screen" class="screen">
+        <div class="eyebrow">测试结果</div>
+        <div class="result-layout">
+          <div class="result-visual-wrap">
+            <img id="result-image" class="result-image" src="" alt="测试结果图" />
+          </div>
+          <div class="result-copy">
+            <div class="result-label">你的鸟格类型是：</div>
+            <h2 id="result-title" class="result-title"></h2>
+            <div id="result-code" class="result-code"></div>
+            <div id="result-species" class="result-species"></div>
+
+            <div class="result-panels">
+              <div class="panel">
+                <div class="panel-title">核心行为倾向</div>
+                <div id="result-core" class="panel-text"></div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">你的应对机制</div>
+                <div id="result-coping" class="panel-text"></div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">你的社交位置</div>
+                <div id="result-social" class="panel-text"></div>
+              </div>
+              <div class="panel bird-review-panel">
+                <div class="panel-title">鸟评</div>
+                <div id="result-review" class="panel-text"></div>
+              </div>
+            </div>
+
+            <div id="score-breakdown" class="score-breakdown"></div>
+
+            <div class="result-actions">
+              <button id="restart-btn" class="primary-btn">重新测试</button>
+              <button id="copy-btn" class="ghost-btn">复制结果文案</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
